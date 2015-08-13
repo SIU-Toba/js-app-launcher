@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        
+        <!-- Include jquery 1.9.0.min -->
+        <SCRIPT language='JavaScript1.4' type='text/javascript' src='https://code.jquery.com/jquery-1.9.0.min.js'></SCRIPT>
+        
+    </head>
+    
+    <body style="background-color: gray">
+        
+        <!-- Include de los CSS de app_launcher -->
+        <link rel="stylesheet" href="css/app_launcher.css" type="text/css" />
+        
+        <!-- Include de la clase app_launcher.js -->
+        <script type="text/javascript" src="app_launcher.js"></script>  
+        
+        <!-- Definicion de un div contenedor -->
+        <div class="enc-usuario" style="color:white;">   
+        </div>
+    
+        <!-- Ejemplos de utilizacion -->
+        <script>
+            $(document).ready(function () {
+                
+                // Descomentar para ver las dintintas opciones de appLauncher
+                appLauncher.init('.enc-usuario', '{"usuario_id":"toba","usuario_nombre":"Usuario Administrador","usuario_foto":"http:\/\/localhost:4001\/toba_2.7\/img\/usuarios\/foto_perfil_defecto.png","perfil_url":"http:\/\/localhost:4003\/","aplicaciones":[{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"},{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"},{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"}]}', 'alert("Saliendo de la aplicación...");');
+                //appLauncher.init('.enc-usuario', '{"usuario_id":"toba","usuario_nombre":"Usuario Administrador","usuario_foto":"http:\/\/localhost:4001\/toba_2.7\/img\/usuarios\/foto_perfil_defecto.png","perfil_url":"http:\/\/localhost:4003\/","aplicaciones":[{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"},{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"},{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"}]}', 'alert("Saliendo de la aplicación...");');
+                //appLauncher.init('.enc-usuario', '{"usuario_id":"toba","usuario_nombre":"Usuario Administrador","usuario_foto":"http:\/\/localhost:4001\/toba_2.7\/img\/usuarios\/foto_perfil_defecto.png","perfil_url":"http:\/\/localhost:4003\/","aplicaciones":[{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"},{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"}]}', 'alert("Saliendo de la aplicación...");');
+                //appLauncher.init('.enc-usuario', '{"usuario_id":"toba","usuario_nombre":"Usuario Administrador","usuario_foto":"http:\/\/localhost:4001\/toba_2.7\/img\/usuarios\/foto_perfil_defecto.png","perfil_url":"http:\/\/localhost:4003\/","aplicaciones":[{"url":"http:\/\/localhost:4001\/gestion\/","etiqueta":"siu\/arai-usuarios-gestion","icono_url":"http:\/\/localhost:4001\/gestion\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-usuarios-gestion"},{"url":"http:\/\/localhost:4002\/arai-catalogos\/","etiqueta":"siu\/arai-catalogos","icono_url":"http:\/\/localhost:4002\/arai-catalogos\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/arai-catalogos"},{"url":"http:\/\/localhost:4004\/mapuche\/","etiqueta":"siu\/mapuche","icono_url":"http:\/\/localhost:4004\/mapuche\/img\/logo.gif","title":"Aplicaci\u00f3n siu\/mapuche"}]}', 'alert("Saliendo de la aplicación...");');
+                //appLauncher.init('.enc-usuario', '{"usuario_id":"toba","usuario_nombre":"Usuario Administrador","usuario_foto":"http:\/\/localhost:4001\/toba_2.7\/img\/usuarios\/foto_perfil_defecto.png","perfil_url":"http:\/\/localhost:4003\/","aplicaciones":[]}', 'alert("Saliendo de la aplicación...");');
+            });
+        </script>  
+        
+    </body>
+</html>
