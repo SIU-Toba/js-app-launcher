@@ -3,7 +3,7 @@ Librería JS para graficar un lanzador de aplicaciones. La misma requiere jQuery
 
 ### Inicialización
 
-Para inicializar esta librería se deben configurar los siguientes parametros:
+Para inicializar la librería se deben configurar los siguientes parametros:
 
 * container_appLauncher: Nombre de la clase del tag html que contendrá el app-launcher, para el siguiente ejemplo el valor de container_appLauncher es `contenedor`:
 
@@ -45,13 +45,32 @@ Para inicializar esta librería se deben configurar los siguientes parametros:
 
 Para utilizar la librería debemos tener en cuenta lo siguiente:
 
-* Incluir archivo CSS para generar el app-launcher, en la carpeta css se incluye un css por defecto:
+* Incluir archivo CSS, en la carpeta `css` se incluye un por defecto:
+
+  ```
+  <link rel="stylesheet" href="css/app_launcher.css" type="text/css" />
+  ```
 
 * Incluir la librería propiamente dicha:
 
+  ```
+  <script type="text/javascript" src="app_launcher.js"></script>  
+  ```
+
 * Definir un tag html que contendrá el app-launcher, por ejemplo un `<div>`:
 
-* Inicializar el app-launcher mediante codigo javaScript:
+  ```
+  <div class="enc-usuario" >   
+  </div>
+  ```
 
+* Inicializar el app-launcher mediante código javaScript:
+
+  ```
+  <script>
+    appLauncher.init('.enc-usuario', '{"usuario_id":"admin","usuario_nombre":"Usuario Administrador","usuario_foto":"img\/foto_perfil_defecto.png","perfil_url":"#","aplicaciones":[]}', 'alert("Salir de la aplicación!!!");');
+  </script>
+  ```
+  
 
 
