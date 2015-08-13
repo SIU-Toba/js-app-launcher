@@ -86,9 +86,9 @@ var appLauncher = new function () {
             $(appLauncherData.aplicaciones).each(function( index, element ) {
                 if (element.url != undefined && element.icono_url != undefined && element.etiqueta != undefined && element.title != undefined) {
                     if (index < 9) {
-                        $(".first-set").append("<li><a href='"+ element.url +"' target='aplicacion_"+ index +"' id='aplicacion_"+ index +"'> <img class='fa fa-4x icono_url' src='" + element.icono_url + "' alt='" + element.title + "'></i> " + element.etiqueta + " </a> </li>");
+                        $(".first-set").append("<li> <a class='link_aplicaciones' href='"+ element.url +"' target='aplicacion_"+ index +"' id='aplicacion_"+ index +"'> <div> <img class='fa fa-4x icono_url' src='" + element.icono_url + "' alt='" + element.title + "'> </i> </div> <div> " + element.etiqueta + " </div> </a> </li>");
                     } else {
-                        $(".second-set").append("<li><a href='"+ element.url +"' target='aplicacion_"+ index +"' id='aplicacion_"+ index +"'> <img class='fa fa-4x icono_url' src='" + element.icono_url + "' alt='" + element.title + "'></i> " + element.etiqueta + " </a> </li>");
+                        $(".second-set").append("<li> <a class='link_aplicaciones' href='"+ element.url +"' target='aplicacion_"+ index +"' id='aplicacion_"+ index +"'> <div> <img class='fa fa-4x icono_url' src='" + element.icono_url + "' alt='" + element.title + "'></i> </div> <div> " + element.etiqueta + " </div> </a> </li>");
                     }
                 }
             });
