@@ -1,7 +1,14 @@
 # js-app-launcher
 Librería JS para graficar un lanzador de aplicaciones. La misma requiere jQuery para su funcionamiento.
 
-## Modo de uso
+### Inicialización
+
+Para inicializar esta librería se deben configurar los siguientes parametros en el init:
+
+* container_appLauncher: Nombre de la clase del tag html que contendrá el app-launcher, ejemplo:
+  ```<div class="contenedor"> </div>```
+
+### Modo de uso
 
 Para utilizar la librería debemos tener en cuenta lo siguiente:
 
