@@ -37,9 +37,8 @@ Para inicializar esta librería se deben configurar los siguientes parametros:
         ]
 }
 ```
-
  
-* 
+* js_salir: Lógica javaScript que se aplica al boton de `salir`.
 
 
 ### Modo de uso
