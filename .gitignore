@@ -1,1 +1,6 @@
-/nbproject/*
+vendor
+*.iml
+.log.git
+composer.lock
+nbproject/*
+.idea
