@@ -9,7 +9,7 @@ Para inicializar la librería se debe configurar el objeto `appLauncherDataParam
 
   ```<div id="enc-usuario"> </div>```
   
-* data: arreglo que contiene información del usuario y aplicaciones a las que tiene acceso. Solo se muestran los datos que estan definidos en el mismo. El formato del arreglo es el sigueinte:
+* data: objeto que contiene información del usuario y aplicaciones a las que tiene acceso. Solo se muestran los datos que estan definidos en el mismo. El formato es el sigueinte:
 
 ```
   {
@@ -45,9 +45,11 @@ Para inicializar la librería se debe configurar el objeto `appLauncherDataParam
 
 Para utilizar la librería debemos tener en cuenta lo siguiente:
 
-* Incluir archivo CSS, en la carpeta `css` se incluye un por defecto:
+* Incluir archivos CSS, en la carpeta `css` se encuentra el css por defecto:
 
   ```
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="css/app_launcher.css" type="text/css" />
   ```
 
@@ -60,7 +62,7 @@ Para utilizar la librería debemos tener en cuenta lo siguiente:
 * Definir un tag html que contendrá el app-launcher, por ejemplo un `<div>`:
 
   ```
-  <div class="enc-usuario" >   
+  <div id="enc-usuario" >   
   </div>
   ```
 
@@ -68,7 +70,29 @@ Para utilizar la librería debemos tener en cuenta lo siguiente:
 
   ```
   <script>
-    appLauncher.init('.enc-usuario', '{"usuario_id":"admin","usuario_nombre":"Usuario Administrador","usuario_foto":"img\/foto_perfil_defecto.png","perfil_url":"#","aplicaciones":[]}', 'alert("Salir de la aplicación!!!");');
+    // defino el div que contine el appLauncher
+    var divContainer = "#enc-usuario";
+    
+    // defino los datos para armar el appLauncher
+    var appLauncherData = { "usuario_id":"admin",
+                            "usuario_nombre":"Usuario Administrador",
+                            "usuario_foto":"img\/foto_perfil_defecto.png",
+                            "perfil_url":"#",
+                            "aplicaciones":[]
+                        };
+    
+    // funcion js que contiene la logica js para logout
+    var fnc_js_salir = function() { alert("Salir de la aplicación!!!")};
+    
+    appLauncherData.aplicaciones[0] = {"url":"https:\/\/drive.google.com\/","etiqueta":"Google drive","icono_url":"img\/google_drive.png","title":"Aplicaci\u00f3n de google drive"};
+    appLauncherData.aplicaciones[1] = {"url":"https:\/\/mail.google.com\/","etiqueta":"Google gmail","icono_url":"img\/google_gmail.png","title":"Aplicaci\u00f3n de google gmail"};
+    appLauncherData.aplicaciones[2] = {"url":"https:\/\/plus.google.com\/","etiqueta":"Google plus","icono_url":"img\/google_plus.png","title":"Aplicaci\u00f3n de google plus"};
+    
+    appLauncher.init({
+                    container: divContainer,
+                    data: appLauncherData,
+                    js_salir: fnc_js_salir
+                });
   </script>
   ```
   
