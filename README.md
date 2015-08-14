@@ -3,13 +3,13 @@ Librería JS para graficar un lanzador de aplicaciones. La misma requiere jQuery
 
 ### Inicialización
 
-Para inicializar la librería se deben configurar los siguientes parametros:
+Para inicializar la librería se debe configurar el objeto `appLauncherDataParam` que contiene los siguientes datos:
 
-* container_appLauncher: Nombre de la clase del tag html que contendrá el app-launcher, para el siguiente ejemplo el valor de container_appLauncher es `contenedor`:
+* container: Identificador del tag html que contendrá el app-launcher, para el siguiente ejemplo el valor de container es `enc-usuario`:
 
-  ```<div class="contenedor"> </div>```
+  ```<div id="enc-usuario"> </div>```
   
-* appLauncherDataJSON: JSON que contiene información del usuario y aplicaciones a las que tiene acceso. Solo se muestran los datos que estan definidos en el mismo. El formato JSON es el sigueinte:
+* data: arreglo que contiene información del usuario y aplicaciones a las que tiene acceso. Solo se muestran los datos que estan definidos en el mismo. El formato del arreglo es el sigueinte:
 
 ```
   {
