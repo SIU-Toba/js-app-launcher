@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css);
-
 header {
 	text-align:center;
 }
@@ -13,11 +10,11 @@ header h1 {
 	margin: 20px;
 }
 
-.hide {
+.hide_app_launcher {
 	display: none;
 }
 
-.container_aplicaciones {
+#container_aplicaciones {
         font-family: 'Lato', Arial, sans-serif;
 	margin: 0 auto;
         right: 4px;
@@ -26,13 +23,13 @@ header h1 {
         padding-left: 8px
 }
 
-.launcher {
+#launcher {
 	position: relative;
 	text-align: center;
 	/*color:white;*/
 }
 
-.app-launcher {
+#app-launcher {
 	position: absolute;
 	/*left: 84px;*/
 	/*top: 40px;*/
@@ -40,7 +37,7 @@ header h1 {
         right: 4px;
 }
 
-.app-launcher::before {
+#app-launcher::before {
 	content: '';
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
@@ -54,7 +51,7 @@ header h1 {
         padding-top: 10px;
 }
 
-.apps {
+#apps {
 	position: relative;
 	border: 1px solid #ccc;
         border-color: rgba(0,0,0,.2);
@@ -69,13 +66,13 @@ header h1 {
 	margin-bottom: 30px;
 }
 
-.launcher .button {
+#launcher #button {
 	cursor: pointer;
 	width: 32px;
 	margin: 0 auto;
 }
 
-.apps ul {
+#apps ul {
 	background: #fff;
 	margin: 0;
 	padding: 28px;
@@ -84,7 +81,7 @@ header h1 {
 	list-style: none;
 }
 
-.apps ul li {
+#apps ul li {
 	float: left;
 	height: 64px;
 	width: 88px;
@@ -104,7 +101,7 @@ header h1 {
     color: black;
 } 
 
-.apps .more {
+#apps #more {
 	line-height: 40px;
 	text-align: center;
 	display: block;
@@ -118,7 +115,7 @@ header h1 {
 	color: #282828;
 }
 
-.apps.overflow .more {
+#apps.overflow #more {
 	border-bottom: 1px solid #ebebeb;
 	left: 28px;
 	width: 264px;
@@ -202,7 +199,7 @@ header h1 {
 	color:  #403F3F;
 }
 
-.container_datos_usuario {
+#container_datos_usuario {
         font-family: 'Lato', Arial, sans-serif;
 	margin: 0 auto;
         right: 4px;
@@ -211,20 +208,20 @@ header h1 {
         padding-left: 15px
 }
 
-.datos_usuario_general {
+#datos_usuario_general {
 	position: relative;
 	text-align: left;
         /*width: 250px;*/
 	/*color:white;*/
 }
 
-.datos_usuario {
+#datos_usuario {
 	position: absolute;
 	padding-top: 10px;
         right: 4px;
 }
 
-.datos_usuario::before {
+#datos_usuario::before {
 	content: '';
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
@@ -237,7 +234,7 @@ header h1 {
         padding-top: 10px;
 }
 
-.perfil_usuario {
+#perfil_usuario {
 	position: relative;
 	border-top: 1px solid #ccc;
         border-left: 1px solid #ccc;
@@ -253,60 +250,60 @@ header h1 {
         color:black;
 }
 
-.perfil_usuario_boton_cuenta_id {
+#perfil_usuario_boton_cuenta_id {
     display: inline-block;
     margin-right: 10px;
     font-weight: bold;
 }
 
-.button_datos_usuario_foto {
+#button_datos_usuario_foto {
     display: inline-block;
 }
 
-.perfil_usuario_foto {
+#perfil_usuario_foto {
     display: inline-block;
     vertical-align: center;
 }
 
-.perfil_usuario_boton_foto_img {
+#perfil_usuario_boton_foto_img {
     height: 25px;
     width: 25px;
     margin-right: 5px;
     position: relative;
 }
 
-.perfil_usuario_foto_img {
+#perfil_usuario_foto_img {
     max-height: 70px;
     max-width: 70px;
     margin-right: 20px;
     position: relative;
 }
 
-.perfil_usuario_cuenta {
+#perfil_usuario_cuenta {
     display: inline-block;
 }
 
-.perfil_usuario_cuenta_nombre {
+#perfil_usuario_cuenta_nombre {
     font-weight: bold;
     margin: 5px 0px 1px;
 }
 
-.perfil_usuario_cuenta_id {
+#perfil_usuario_cuenta_id {
     margin: 0px 0px 1px;
 }
 
-.perfil_usuario_cuenta_perfil {
+#perfil_usuario_cuenta_perfil {
     display: inline-block;
     padding-bottom: 6px;
 }
 
-.perfil_usuario_cuenta_salir {
+#perfil_usuario_cuenta_salir {
     display: inline-block;
     padding-bottom: 6px;
     padding-left: 6px;
 }
 
-.boton_cuenta {
+#boton_cuenta {
         color: #FFF;
 	cursor: default;
         text-decoration: none;
@@ -325,7 +322,7 @@ header h1 {
         font: 13px/27px Arial,sans-serif;
 }
 
-.boton_salir {
+#boton_salir {
         color: #FFF;
 	cursor: default;
         text-decoration: none;
@@ -344,7 +341,7 @@ header h1 {
         font: 13px/27px Arial,sans-serif;
 }
 
-.datos_usuario_general .button_datos_usuario {
+#datos_usuario_general #button_datos_usuario {
 	cursor: pointer;
         vertical-align: middle;
 	/*width: 32px;*/
