@@ -262,7 +262,7 @@
 	transition: height .2s ease-in-out;
 	overflow-y: auto;
 	overflow-x: hidden;
-	width: 320px;
+	width: 200px;
 	background-color: #fff;
         color:black;
 }
@@ -318,6 +318,10 @@
     display: inline-block;
     padding-bottom: 6px;
     padding-left: 6px;
+}
+
+#perfil_usuario_cuenta_botones {
+    text-align: right;
 }
 
 #container_datos_usuario #boton_cuenta {
