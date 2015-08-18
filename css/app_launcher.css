@@ -1,8 +1,11 @@
-header {
+
+// APP LAUNCHER
+
+#container_aplicaciones header {
 	text-align:center;
 }
 
-header h1 {
+#container_aplicaciones header h1 {
 	font-size: 2em;
 	line-height: 1.3;
 	margin: 0;
@@ -10,7 +13,7 @@ header h1 {
 	margin: 20px;
 }
 
-.hide_app_launcher {
+#container_aplicaciones .hide_app_launcher {
 	display: none;
 }
 
@@ -23,13 +26,13 @@ header h1 {
         padding-left: 8px
 }
 
-#launcher {
+#container_aplicaciones #launcher {
 	position: relative;
 	text-align: center;
 	/*color:white;*/
 }
 
-#app-launcher {
+#container_aplicaciones #app-launcher {
 	position: absolute;
 	/*left: 84px;*/
 	/*top: 40px;*/
@@ -37,7 +40,7 @@ header h1 {
         right: 4px;
 }
 
-#app-launcher::before {
+#container_aplicaciones #app-launcher::before {
 	content: '';
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
@@ -51,7 +54,7 @@ header h1 {
         padding-top: 10px;
 }
 
-#apps {
+#container_aplicaciones #apps {
 	position: relative;
 	border: 1px solid #ccc;
         border-color: rgba(0,0,0,.2);
@@ -66,13 +69,13 @@ header h1 {
 	margin-bottom: 30px;
 }
 
-#launcher #button {
+#container_aplicaciones #launcher #button {
 	cursor: pointer;
 	width: 32px;
 	margin: 0 auto;
 }
 
-#apps ul {
+#container_aplicaciones #apps ul {
 	background: #fff;
 	margin: 0;
 	padding: 28px;
@@ -81,7 +84,7 @@ header h1 {
 	list-style: none;
 }
 
-#apps ul li {
+#container_aplicaciones #apps ul li {
 	float: left;
 	height: 64px;
 	width: 88px;
@@ -91,17 +94,17 @@ header h1 {
         font-size: 14px;
 }
 
-.link_aplicaciones {
+#container_aplicaciones .link_aplicaciones {
     text-decoration: none;
     color: black;
     outline: none;
 }
 
-.link_aplicaciones:hover{
+#container_aplicaciones .link_aplicaciones:hover{
     color: black;
 } 
 
-#apps #more {
+#container_aplicaciones #apps #more {
 	line-height: 40px;
 	text-align: center;
 	display: block;
@@ -115,7 +118,7 @@ header h1 {
 	color: #282828;
 }
 
-#apps.overflow #more {
+#container_aplicaciones #apps.overflow #more {
 	border-bottom: 1px solid #ebebeb;
 	left: 28px;
 	width: 264px;
@@ -125,78 +128,92 @@ header h1 {
 	outline: none;
 }
 
-.icono_url{
+#container_aplicaciones .icono_url{
 	max-height: 30px;
         max-width: 70px;
         font-size: 9px;
 }
 
-.fa-facebook-square {
+#container_aplicaciones .fa-facebook-square {
 	color: #3b5998;
 }
 
-.fa-twitter-square {
+#container_aplicaciones .fa-twitter-square {
 	color: #00aced;
 }
 
-.fa-google-plus-square {
+#container_aplicaciones .fa-google-plus-square {
 	color: #dd4b39;
 }
 
-.fa-youtube-square {
+#container_aplicaciones .fa-youtube-square {
 	color: #bb0000;
 }
 
-.fa-linkedin {
+#container_aplicaciones .fa-linkedin {
 	color: #007bb6;
 }
 
-.fa-instagram {
+#container_aplicaciones .fa-instagram {
 	color: #517fa4;
 }
 
-.fa-pinterest {
+#container_aplicaciones .fa-pinterest {
 	color: #cb2027;
 }
 
-.fa-tumblr-square {
+#container_aplicaciones .fa-tumblr-square {
 	color: #32506d;
 }
 
-.fa-skype {
+#container_aplicaciones .fa-skype {
 	color: #009EE5;
 }
 
-.fa-android {
+#container_aplicaciones .fa-android {
 	color: #99CC00;
 }
 
-.fa-dribbble {
+#container_aplicaciones .fa-dribbble {
 	color:  #C35D9C;
 }
 
-.fa-html5 {
+#container_aplicaciones .fa-html5 {
 	color: #F65B1F;
 }
 
-.fa-css3 {
+#container_aplicaciones .fa-css3 {
 	color: #0070BA;
 }
 
-.fa-dropbox {
+#container_aplicaciones .fa-dropbox {
 	color: #65B1ED;
 }
 
-.fa-windows {
+#container_aplicaciones .fa-windows {
 	color: #1DAAE2;
 }
 
-.fa-linux {
+#container_aplicaciones .fa-linux {
 	color: #DD4814;
 }
 
-.fa-apple {
+#container_aplicaciones .fa-apple {
 	color:  #403F3F;
+}
+
+// DATOS USUARIO
+
+#container_datos_usuario header {
+	text-align:center;
+}
+
+#container_datos_usuario header h1 {
+	font-size: 2em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+	margin: 20px;
 }
 
 #container_datos_usuario {
@@ -208,20 +225,20 @@ header h1 {
         padding-left: 15px
 }
 
-#datos_usuario_general {
+#container_datos_usuario #datos_usuario_general {
 	position: relative;
 	text-align: left;
         /*width: 250px;*/
 	/*color:white;*/
 }
 
-#datos_usuario {
+#container_datos_usuario #datos_usuario {
 	position: absolute;
 	padding-top: 10px;
         right: 4px;
 }
 
-#datos_usuario::before {
+#container_datos_usuario #datos_usuario::before {
 	content: '';
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
@@ -234,7 +251,7 @@ header h1 {
         padding-top: 10px;
 }
 
-#perfil_usuario {
+#container_datos_usuario #perfil_usuario {
 	position: relative;
 	border-top: 1px solid #ccc;
         border-left: 1px solid #ccc;
@@ -250,60 +267,60 @@ header h1 {
         color:black;
 }
 
-#perfil_usuario_boton_cuenta_id {
+#container_datos_usuario #perfil_usuario_boton_cuenta_id {
     display: inline-block;
     margin-right: 10px;
     font-weight: bold;
 }
 
-#button_datos_usuario_foto {
+#container_datos_usuario #button_datos_usuario_foto {
     display: inline-block;
 }
 
-#perfil_usuario_foto {
+#container_datos_usuario #perfil_usuario_foto {
     display: inline-block;
     vertical-align: center;
 }
 
-#perfil_usuario_boton_foto_img {
+#container_datos_usuario #perfil_usuario_boton_foto_img {
     height: 25px;
     width: 25px;
     margin-right: 5px;
     position: relative;
 }
 
-#perfil_usuario_foto_img {
+#container_datos_usuario #perfil_usuario_foto_img {
     max-height: 70px;
     max-width: 70px;
     margin-right: 20px;
     position: relative;
 }
 
-#perfil_usuario_cuenta {
+#container_datos_usuario #perfil_usuario_cuenta {
     display: inline-block;
 }
 
-#perfil_usuario_cuenta_nombre {
+#container_datos_usuario #perfil_usuario_cuenta_nombre {
     font-weight: bold;
     margin: 5px 0px 1px;
 }
 
-#perfil_usuario_cuenta_id {
+#container_datos_usuario #perfil_usuario_cuenta_id {
     margin: 0px 0px 1px;
 }
 
-#perfil_usuario_cuenta_perfil {
+#container_datos_usuario #perfil_usuario_cuenta_perfil {
     display: inline-block;
     padding-bottom: 6px;
 }
 
-#perfil_usuario_cuenta_salir {
+#container_datos_usuario #perfil_usuario_cuenta_salir {
     display: inline-block;
     padding-bottom: 6px;
     padding-left: 6px;
 }
 
-#boton_cuenta {
+#container_datos_usuario #boton_cuenta {
         color: #FFF;
 	cursor: default;
         text-decoration: none;
@@ -322,7 +339,7 @@ header h1 {
         font: 13px/27px Arial,sans-serif;
 }
 
-#boton_salir {
+#container_datos_usuario #boton_salir {
         color: #FFF;
 	cursor: default;
         text-decoration: none;
@@ -341,7 +358,7 @@ header h1 {
         font: 13px/27px Arial,sans-serif;
 }
 
-#datos_usuario_general #button_datos_usuario {
+#container_datos_usuario #datos_usuario_general #button_datos_usuario {
 	cursor: pointer;
         vertical-align: middle;
 	/*width: 32px;*/
