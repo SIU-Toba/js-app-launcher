@@ -57,7 +57,6 @@ var appLauncher = new function () {
         $(appLauncherData.container).append(html_usuario);
                 
         if (appLauncherData.data.usuario_foto != undefined) {
-            $(appLauncherData.container + ' #perfil_usuario').css({width: '300px'});
             $(appLauncherData.container + " #button_datos_usuario_foto").html("<img id='perfil_usuario_boton_foto_img' src='" + appLauncherData.data.usuario_foto + "'></i>");
             $(appLauncherData.container + " #perfil_usuario_foto").html("<img id='perfil_usuario_foto_img' src='" + appLauncherData.data.usuario_foto + "'></i> ");
         }

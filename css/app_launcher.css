@@ -222,7 +222,7 @@
         right: 4px;
         float: right;
         display: inline-block;
-        padding-left: 15px
+        padding-left: 15px;
 }
 
 #container_datos_usuario #datos_usuario_general {
@@ -236,6 +236,9 @@
 	position: absolute;
 	padding-top: 10px;
         right: 4px;
+        width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+        width: -moz-max-content;    /* Firefox/Gecko */
+        width: -webkit-max-content; /* Chrome */
 }
 
 #container_datos_usuario #datos_usuario::before {
@@ -262,7 +265,6 @@
 	transition: height .2s ease-in-out;
 	overflow-y: auto;
 	overflow-x: hidden;
-	width: 200px;
 	background-color: #fff;
         color:black;
 }
@@ -280,6 +282,7 @@
 #container_datos_usuario #perfil_usuario_foto {
     display: inline-block;
     vertical-align: center;
+    padding-left: 10px;
 }
 
 #container_datos_usuario #perfil_usuario_boton_foto_img {
@@ -292,12 +295,13 @@
 #container_datos_usuario #perfil_usuario_foto_img {
     max-height: 70px;
     max-width: 70px;
-    margin-right: 20px;
     position: relative;
 }
 
 #container_datos_usuario #perfil_usuario_cuenta {
     display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 #container_datos_usuario #perfil_usuario_cuenta_nombre {
