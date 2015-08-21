@@ -13,23 +13,23 @@ Para inicializar la librería se debe configurar el objeto `appLauncherDataParam
 
 ```
   {
-        ‘usuario_id’ : ‘admin’,
-        ‘usuario_nombre’ : ‘Usuario Administrador’,
-        ‘usuario_foto’:    ‘http://aplicacion.com/perfil/admin.png’
-        ‘perfil_url’: ‘http://aplicacion.com/perfil/’
-        ‘aplicaciones’ :
+        'usuario_id’ : 'admin’,
+        'usuario_nombre’ : 'Usuario Administrador’,
+        'usuario_foto’:    'http://aplicacion.com/perfil/admin.png’
+        'perfil_url’: 'http://aplicacion.com/perfil/’
+        'aplicaciones’ :
         [
             {
-              ‘url’ : ‘http://aplicacion1.com’,
-              ‘icono_url’ : ‘http://aplicacion1.com/logo.png’,
-              ‘etiqueta’ : ‘Aplicacion 1’,
-              ‘title’: ‘descripcion de aplicacion 1‘
+              'url’ : 'http://aplicacion1.com’,
+              'icono_url’ : 'http://aplicacion1.com/logo.png’,
+              'etiqueta’ : 'Aplicacion 1’,
+              'title’: 'descripcion de aplicacion 1'
             },
             {
-              ‘url’ : ‘http://aplicacion2.com’,
-              ‘icono_url’ : ‘http://aplicacion2.com/logo.png’,
-              ‘etiqueta’ : ‘Aplicacion 2’,
-              ‘title’: ‘descripcion de aplicacion 2‘
+              'url’ : 'http://aplicacion2.com’,
+              'icono_url’ : 'http://aplicacion2.com/logo.png’,
+              'etiqueta’ : 'Aplicacion 2’,
+              'title’: 'descripcion de aplicacion 2'
             },
             {
             ...
