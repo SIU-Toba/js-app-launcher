@@ -103,15 +103,15 @@ var appLauncher = new function () {
             html_aplicaciones += "      </div>";
             html_aplicaciones += "  </div>";
             $(appLauncherData.container).append(html_aplicaciones);
-            
+
             if (cant_lineas <=3) {
-                height_first_set = cant_lineas * appLauncherData.launcherMaxLineHeight;
-                height_apps = height_first_set + 57;
+                height_apps = cant_lineas * appLauncherData.launcherMaxLineHeight + 40;
+                height_first_set = height_apps - 5;
             } else {
                 height_first_set = 3 * appLauncherData.launcherMaxLineHeight;
-                height_apps = height_first_set + 97;
+                height_apps = height_first_set + 80;
 
-                $(appLauncherData.container + " #apps").append("<a href='#' id='more'>Más</a>");
+                $(appLauncherData.container + " #apps").append("<a href='#' id='more'>MÃ¡s</a>");
                 $(appLauncherData.container + " #apps").append("<ul id='second-set' class='hide_app_launcher'> </div>");
             }
 

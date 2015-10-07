@@ -89,7 +89,7 @@ Falta aplicar
 #container_aplicaciones #apps ul {
     background: #fff;
     margin: 0;
-    padding: 28px;
+    padding: 20px;
     width: 320px;
     overflow: hidden;
     list-style: none;
@@ -102,7 +102,11 @@ Falta aplicar
     color: black;
     padding: 18px 0;
     text-align: center;
-    font-size: 14px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+#container_aplicaciones #apps ul li a {
+    font-size: 12px;
 }
 
 #container_aplicaciones .link_aplicaciones {
