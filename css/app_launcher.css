@@ -1,30 +1,30 @@
 /**
 Falta aplicar
 #app_launcher {
-	margin: 10px;
+    margin: 10px;
 }
 
 #app-launcher-container {
-	background-color: #fff;
+    background-color: #fff;
 }
 **/
 
 // APP LAUNCHER
 
 #container_aplicaciones header {
-	text-align:center;
+    text-align:center;
 }
 
 #container_aplicaciones header h1 {
-	font-size: 2em;
-	line-height: 1.3;
-	margin: 0;
-	font-weight: 300;
-	margin: 20px;
+    font-size: 2em;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 300;
+    margin: 20px;
 }
 
 #container_aplicaciones .hide_app_launcher {
-	display: none;
+    display: none;
 }
 
 #container_aplicaciones {
@@ -33,29 +33,30 @@ Falta aplicar
     right: 4px;
     float: right;
     display: inline-block;
-    padding-left: 8px
+    padding-left: 8px;
+    margin-top: 10px;
 }
 
 #container_aplicaciones #launcher {
-	position: relative;
-	text-align: center;
-	/*color:white;*/
+    position: relative;
+    text-align: center;
+    /*color:white;*/
 }
 
 #container_aplicaciones #app-launcher {
-	position: absolute;
-	/*left: 84px;*/
-	/*top: 40px;*/
+    position: absolute;
+    /*left: 84px;*/
+    /*top: 40px;*/
     padding-top: 10px;
     right: 4px;
 }
 
 #container_aplicaciones #app-launcher::before {
-	content: '';
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid white;
-	position: absolute;
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute;
     top: -9px;
     right: 5px;
     /*left: 50%;*/
@@ -65,43 +66,42 @@ Falta aplicar
 }
 
 #container_aplicaciones #apps {
-	position: relative;
-	border: 1px solid #ccc;
+    position: relative;
+    border: 1px solid #ccc;
     border-color: rgba(0,0,0,.2);
-	box-shadow: 0 2px 10px rgba(0,0,0,.2);
-	-webkit-transition: height .2s ease-in-out;
-	transition: height .2s ease-in-out;
-	/*min-height: 196px;*/
-	overflow-y: auto;
-	overflow-x: hidden;
-	width: 320px;
-	/*height: 396px;*/
-	margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    -webkit-transition: height .2s ease-in-out;
+    transition: height .2s ease-in-out;
+    /*min-height: 196px;*/
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 320px;
+    /*height: 396px;*/
+    margin-bottom: 30px;
 }
 
 #container_aplicaciones #launcher #button {
-	cursor: pointer;
-	width: 32px;
-	margin: 0 auto;
+    cursor: pointer;
+    width: 32px;
+    margin: 0 auto;
 }
 
 #container_aplicaciones #apps ul {
-	background: #fff;
-	margin: 0;
-	padding: 28px;
-	width: 320px;
-	height: 255px;
-	overflow: hidden;
-	list-style: none;
+    background: #fff;
+    margin: 0;
+    padding: 28px;
+    width: 320px;
+    overflow: hidden;
+    list-style: none;
 }
 
 #container_aplicaciones #apps ul li {
-	float: left;
-	height: 64px;
-	width: 88px;
-	color: black;
-	padding: 18px 0;
-	text-align: center;
+    float: left;
+    height: 64px;
+    width: 88px;
+    color: black;
+    padding: 18px 0;
+    text-align: center;
     font-size: 14px;
 }
 
@@ -116,31 +116,31 @@ Falta aplicar
 } 
 
 #container_aplicaciones #apps #more {
-	line-height: 40px;
-	text-align: center;
-	display: block;
-	width: 320px;
-	background: #f5f5f5;
-	cursor: pointer;
-	height: 40px;
-	overflow: hidden;
-	position: absolute;
-	text-decoration: none;
-	color: #282828;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    width: 320px;
+    background: #f5f5f5;
+    cursor: pointer;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    text-decoration: none;
+    color: #282828;
 }
 
 #container_aplicaciones #apps.overflow #more {
-	border-bottom: 1px solid #ebebeb;
-	left: 28px;
-	width: 264px;
-	height: 0;
-	cursor: default;
-	height: 0;
-	outline: none;
+    border-bottom: 1px solid #ebebeb;
+    left: 28px;
+    width: 264px;
+    height: 0;
+    cursor: default;
+    height: 0;
+    outline: none;
 }
 
 #container_aplicaciones .icono_url{
-	max-height: 30px;
+    max-height: 30px;
     max-width: 70px;
     font-size: 9px;
 }
@@ -148,15 +148,15 @@ Falta aplicar
 // DATOS USUARIO
 
 #container_datos_usuario header {
-	text-align:center;
+    text-align:center;
 }
 
 #container_datos_usuario header h1 {
-	font-size: 2em;
-	line-height: 1.3;
-	margin: 0;
-	font-weight: 300;
-	margin: 20px;
+    font-size: 2em;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 300;
+    margin: 20px;
 }
 
 #container_datos_usuario {
@@ -166,18 +166,21 @@ Falta aplicar
     float: right;
     display: inline-block;
     padding-left: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+
 }
 
 #container_datos_usuario #datos_usuario_general {
-	position: relative;
-	text-align: left;
+    position: relative;
+    text-align: left;
     /*width: 250px;*/
-	/*color:white;*/
+    /*color:white;*/
 }
 
 #container_datos_usuario #datos_usuario {
-	position: absolute;
-	padding-top: 10px;
+    position: absolute;
+    padding-top: 10px;
     right: 4px;
     width: intrinsic;           /* Safari/WebKit uses a non-standard name */
     width: -moz-max-content;    /* Firefox/Gecko */
@@ -185,33 +188,33 @@ Falta aplicar
 }
 
 #container_datos_usuario #datos_usuario::before {
-	content: '';
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid white;
-	position: absolute;
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute;
     top: -9px;
     right: 20px;
-	margin-left: -5px;
-	z-index: 1;
+    margin-left: -5px;
+    z-index: 1;
     padding-top: 10px;
 }
 
 #container_datos_usuario #perfil_usuario {
-	position: relative;
-	border-top: 1px solid #ccc;
+    position: relative;
+    border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
-	border-color: rgba(0,0,0,.2);
-	box-shadow: 0 2px 10px rgba(0,0,0,.2);
-	-webkit-transition: height .2s ease-in-out;
-	transition: height .2s ease-in-out;
-	overflow-y: auto;
-	overflow-x: hidden;
-	background-color: #fff;
+    border-color: rgba(0,0,0,.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    -webkit-transition: height .2s ease-in-out;
+    transition: height .2s ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
     color:black;
     padding: 15px 15px 15px 17px;
-	border-radius: 2px;
+    border-radius: 2px;
 }
 
 #container_datos_usuario #perfil_usuario_boton_cuenta_id {
@@ -228,8 +231,8 @@ Falta aplicar
     display: inline-block;
     vertical-align: center;
     float: left;
-	padding-left: 0;
-	margin-top: 4px;
+    padding-left: 0;
+    margin-top: 4px;
 
 }
 
@@ -238,8 +241,8 @@ Falta aplicar
     width: 25px;
     margin-right: 5px;
     position: relative;
-  	border: solid 2px #bbb;
-	border-radius: 3px;
+    border: solid 2px #bbb;
+    border-radius: 3px;
 
 }
 
@@ -281,10 +284,10 @@ Falta aplicar
 
 #container_datos_usuario #boton_cuenta,
 #container_datos_usuario #boton_salir {
-	background: #f6f6f6 none repeat scroll 0% 0%;
-	border: none;
-	color: #666;
-	cursor: pointer;
+    background: #f6f6f6 none repeat scroll 0% 0%;
+    border: none;
+    color: #666;
+    cursor: pointer;
     text-decoration: none;
     border-color: #3079ED;
     font-weight: bold;
@@ -301,30 +304,30 @@ Falta aplicar
 
 
 #container_datos_usuario #datos_usuario_general #button_datos_usuario {
-	cursor: pointer;
+    cursor: pointer;
     vertical-align: middle;
-	/*width: 32px;*/
-	margin: 0 auto;
+    /*width: 32px;*/
+    margin: 0 auto;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-clip: padding-box;
-	background-color: rgba(0,0,0,.3);
-	border: 5px solid transparent;
-	border-radius: 10px;
-	min-height: 20px;
-	min-width: 20px;
-	height: 5px;
-	width: 5px;
+    background-clip: padding-box;
+    background-color: rgba(0,0,0,.3);
+    border: 5px solid transparent;
+    border-radius: 10px;
+    min-height: 20px;
+    min-width: 20px;
+    height: 5px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar {
-	height: 15px;
-	width: 15px;
-	background: white;
+    height: 15px;
+    width: 15px;
+    background: white;
 }
 
 ::-webkit-scrollbar-button {
-	height: 0;
-	width: 0;
+    height: 0;
+    width: 0;
 }
