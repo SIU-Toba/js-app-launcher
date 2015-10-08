@@ -34,7 +34,7 @@ Falta aplicar
     float: right;
     display: inline-block;
     padding-left: 8px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #container_aplicaciones #launcher {
@@ -106,7 +106,8 @@ Falta aplicar
     box-sizing: content-box;
 }
 #container_aplicaciones #apps ul li a {
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: normal;
 }
 
 #container_aplicaciones .link_aplicaciones {
@@ -170,7 +171,7 @@ Falta aplicar
     float: right;
     display: inline-block;
     padding-left: 15px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     margin-right: 10px;
 
 }
@@ -241,11 +242,11 @@ Falta aplicar
 }
 
 #container_datos_usuario #perfil_usuario_boton_foto_img {
-    height: 25px;
-    width: 25px;
+    height: 23px;
+    width: 23px;
     margin-right: 5px;
     position: relative;
-    border: solid 2px #bbb;
+    border: solid 1px #bbb;
     border-radius: 3px;
 
 }
