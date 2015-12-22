@@ -6,7 +6,7 @@ var appLauncher = new function () {
         
         // variable que contiene los datos por defecto del appLauncher
         var appLauncherDataDefault = {
-            launcherMaxLineHeight : 100,
+            launcherMaxLineHeight : 100
         };
         
         // variable que contiene los datos del appLauncher
@@ -41,10 +41,10 @@ var appLauncher = new function () {
         html_usuario += "               <div id='perfil_usuario_cuenta'>";
         html_usuario += "                   <div id='perfil_usuario_cuenta_nombre'>";
         html_usuario += "                   </div>";
-        html_usuario += "                   <div id='perfil_usuario_cuenta_id'>";
-        html_usuario += "                   </div>";
         html_usuario += "                   <div id='perfil_usuario_cuenta_botones'>";
         html_usuario += "                       <div id='perfil_usuario_cuenta_perfil'>";
+        html_usuario += "                       </div>";
+        html_usuario += "                       <div id='perfil_usuario_cuenta_id'>";
         html_usuario += "                       </div>";
         html_usuario += "                       <div id='perfil_usuario_cuenta_salir'>";
         html_usuario += "                       </div>";
@@ -67,9 +67,23 @@ var appLauncher = new function () {
         
         if (appLauncherData.data.usuario_id != undefined) {
             $(appLauncherData.container + " #button_datos_usuario").append("<div id='perfil_usuario_boton_cuenta_id'>" + appLauncherData.data.usuario_id + "</div>");
-            $(appLauncherData.container + " #perfil_usuario_cuenta_id").html(appLauncherData.data.usuario_id);
         }
         
+        if (appLauncherData.data.cuentas != undefined && appLauncherData.data.cuentas.length > 0) {     //Agrego el combo con cuentas validas
+            var index, 
+                combo = $("<select/>", {"id": "combo_usuario_cuentas", "name": "combo_usuario_cuentas"})
+                                .appendTo($(appLauncherData.container + " #perfil_usuario_cuenta_id"))
+                                .on('change', function() {
+                                    var nexo = (appLauncherData.urlApp.indexOf('?') == -1) ? '?' :  '&';
+                                    window.location.href = appLauncherData.urlApp + nexo + appLauncherData.usrChangeParam + '=' + $(this).val();
+                                });
+            for (index in appLauncherData.data.cuentas) {
+                combo.append($("<option/>", {'value' : appLauncherData.data.cuentas[index].id, 'text' : appLauncherData.data.cuentas[index].nombre}));
+            }            
+        } else if (appLauncherData.data.usuario_id != undefined) {
+            $(appLauncherData.container + " #perfil_usuario_cuenta_id").html(appLauncherData.data.usuario_id);
+        }
+
         if (appLauncherData.data.perfil_url != undefined) {
             $(appLauncherData.container + " #perfil_usuario_cuenta_perfil").html("<a id='boton_cuenta' href='"+ appLauncherData.data.perfil_url + "' target='perfil_usuario_" + appLauncherData.data.usuario_id + "'> Mi cuenta  </a>" );
         }
