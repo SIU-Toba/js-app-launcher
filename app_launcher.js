@@ -74,8 +74,8 @@ var appLauncher = new function () {
                 combo = $("<select/>", {"id": "combo_usuario_cuentas", "name": "combo_usuario_cuentas"})
                                 .appendTo($(appLauncherData.container + " #perfil_usuario_cuenta_id"))
                                 .on('change', function() {
-                                    var nexo = (appLauncherData.urlApp.indexOf('?') == -1) ? '?' :  '&';
-                                    window.location.href = appLauncherData.urlApp + nexo + appLauncherData.usrChangeParam + '=' + $(this).val();
+                                    var nexo = (appLauncherData.urlAppUsrChg.indexOf('?') == -1) ? '?' :  '&';
+                                    window.location.href = appLauncherData.urlAppUsrChg + nexo + appLauncherData.usrChangeParam + '=' + $(this).val();
                                 });
             for (index in appLauncherData.data.cuentas) {
                 combo.append($("<option/>", {'value' : appLauncherData.data.cuentas[index].id, 'text' : appLauncherData.data.cuentas[index].nombre}));
