@@ -16,9 +16,6 @@
     "app-launcher"
   ],
   "ignore": [
-    "/.*",
-    "nbproject",
-    "composer.json"
   ],
   "license": "MIT"
 }
