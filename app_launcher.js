@@ -119,7 +119,7 @@ var appLauncher = new function () {
         }
 
         if (appLauncherData.data.perfil_url != undefined) {
-            var destino = (appLauncherData.data.usuario_perfil_target) ? appLauncherData.data.usuario_perfil_target : 'usuario_' + appLauncherData.data.usuario_id;
+            var destino = (appLauncherData.data.usuario_perfil_url_target != undefined) ? appLauncherData.data.usuario_perfil_url_target : 'usuario_' + appLauncherData.data.usuario_id;
             $base
                 .find("#usuario_cuenta_perfil")
                 .append($("<a/>",{
@@ -131,7 +131,7 @@ var appLauncher = new function () {
         }
         
         if (appLauncherData.js_salir != undefined) {
-            var leyenda = (appLauncherData.data.leyenda_btn_salir) ? appLauncherData.data.leyenda_btn_salir : 'Salir';
+            var leyenda = (appLauncherData.data.leyenda_btn_salir != undefined) ? appLauncherData.data.leyenda_btn_salir : 'Salir';
             $base
                 .find("#usuario_cuenta_salir")
                     .append($("<a/>", { 
