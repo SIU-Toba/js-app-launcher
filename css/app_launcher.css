@@ -184,7 +184,7 @@ Falta aplicar
 }
 
 #container_datos_usuario #datos_usuario {
-    position: absolute;
+    position: fixed;
     padding-top: 10px;
     right: 4px;
     width: intrinsic;           /* Safari/WebKit uses a non-standard name */
@@ -197,7 +197,7 @@ Falta aplicar
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid white;
-    position: absolute;
+    position: fixed;
     top: -9px;
     right: 20px;
     margin-left: -5px;
