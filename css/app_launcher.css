@@ -197,7 +197,7 @@ Falta aplicar
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid white;
-    position: fixed;
+    position: absolute;
     top: -9px;
     right: 20px;
     margin-left: -5px;
