@@ -249,19 +249,21 @@ var appLauncher = new function () {
                             $base
                                 .find('#second-set')
                                 .hide();
+			scroll = false;
                         }
                 })
                 .end()
                 .find('#apps #more')
                 .on('click', function() {
-                        var $this = $(this);
-                        $base
-                            .find('#second-set')
-                            .show();
-                        $this
-                            .animate({scrollTop: $this[0].scrollHeight})                //TODO: Revisar el $this[0]
-                            .css('height', height_apps)
-                            .addClass('overflow');
+			scroll = true;
+			$base
+				.find('#second-set')
+				.show();
+			$(this)
+				.parent()
+				.css('height', height_apps)
+				.addClass('overflow')
+				.scrollTop(e.originalEvent.wheelDelta);
 
                 });
             // Armo la logica del boton de aplicaciones
