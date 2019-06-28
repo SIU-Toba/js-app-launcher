@@ -175,7 +175,7 @@ var appLauncher = new function () {
                     .find("#apps")
                         .append($("<a/>", {
                             id: 'more',
-                            text: 'Más',
+                            text: 'Expandir',
                             href: '#'
                         }))
                         .append($("<ul/>", {
