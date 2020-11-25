@@ -192,19 +192,19 @@ var appLauncher = new function () {
             // Recorro las aplicaciones y generon los links
             $(appLauncherData.data.aplicaciones)
                 .each(function( index, element ) {
-                    if (element.url != undefined && element.icono_url != undefined && element.etiqueta != undefined && element.descripcion != undefined) {
+                    if (element.url != undefined && element.icono_url != undefined && element.etiqueta != undefined) {
                         var set_contenedor,
                         link_app = $("<a/>", {
                                             class: 'link_aplicaciones',
                                             href: element.url,
                                             target: 'aplicacion_' + index,
                                             id: 'aplicacion_' + index,
-                                            title: element.descripcion
+                                            title: element.descripcion ?? element.etiqueta
                                         }),
                         icon_app = $("<img/>", {
                                             class: 'fa fa-4x icono_url',
                                             src: element.icono_url, 
-                                            alt: element.descripcion 
+                                            alt: element.descripcion ?? element.etiqueta
                                         });
 
                         set_contenedor = (index < 9) ? $base.find("#first-set") : $base.find("#second-set");
@@ -254,7 +254,7 @@ var appLauncher = new function () {
                 })
                 .end()
                 .find('#apps #more')
-                .on('click', function() {
+                .on('click', function(e) {
 			scroll = true;
 			$base
 				.find('#second-set')
