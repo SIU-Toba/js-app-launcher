@@ -20,8 +20,14 @@ var appLauncher = new function () {
         }
 
         var cant_apps = aplicaciones.length || 0,                          // determino la cantidad de aplicaciones
-        cant_lineas = Math.ceil(cant_apps / 3);                            // determino la cantidad de lineas
-        
+        cant_lineas = Math.ceil(cant_apps / 3),                            // determino la cantidad de lineas
+        cuentas = appLauncherData.data.cuentas;                            // variable que contiene listado de cuentas
+
+        if (typeof cuentas === 'object' && cuentas !== null) {
+            cuentas = Object.values(appLauncherData.data.cuentas);         // Si recibe un Object lo transformo en arreglo
+        }
+
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////
         // Armo el HTML del perfil de usuario
         //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,23 +102,23 @@ var appLauncher = new function () {
                         }));
         }
 
-        if (appLauncherData.data.cuentas != undefined && appLauncherData.data.cuentas.length > 0) {     //Agrego el combo con cuentas validas
+        if (cuentas != undefined && cuentas.length > 0) {     //Agrego el combo con cuentas validas
             var index, 
                 opcion,
                 combo = $("<select/>", {"id": "combo_usuario_cuentas", "name": "combo_usuario_cuentas"})
-                                .appendTo($base.find("#usuario_cuenta_id"))
-                                .on('change', function() {
-                                    var nexo = (appLauncherData.urlAppUsrChg.indexOf('?') == -1) ? '?' :  '&';
-                                    window.location.href = appLauncherData.urlAppUsrChg + nexo + appLauncherData.usrChangeParam + '=' + $(this).val();
-                                });
+                        .appendTo($base.find("#usuario_cuenta_id"))
+                        .on('change', function() {
+                            var nexo = (appLauncherData.urlAppUsrChg.indexOf('?') == -1) ? '?' :  '&';
+                            window.location.href = appLauncherData.urlAppUsrChg + nexo + appLauncherData.usrChangeParam + '=' + $(this).val();
+                        });
             //Agrego las distintas cuentas al combo
-            for (index in appLauncherData.data.cuentas) {
+            for (index in cuentas) {
         		opcion = $("<option/>", {
-                                value : appLauncherData.data.cuentas[index].id_base,
-                                text : appLauncherData.data.cuentas[index].descripcion
-                            });
+                            value : cuentas[index].id_base,
+                            text : cuentas[index].descripcion
+                        });
 
-        		if (appLauncherData.data.cuenta_actual == appLauncherData.data.cuentas[index].id_base) {
+                if (appLauncherData.data.cuenta_actual == cuentas[index].id_base) {
         			opcion.attr('selected', '1');
         		}
                 combo.append(opcion);
@@ -141,10 +147,10 @@ var appLauncher = new function () {
             $base
                 .find("#usuario_cuenta_salir")
                     .append($("<a/>", { 
-                                    id: 'boton_salir',
-                                    href: '#',
-                                    text: leyenda
-                                }).on('click', appLauncherData.js_salir)
+                                id: 'boton_salir',
+                                href: '#',
+                                text: leyenda
+                            }).on('click', appLauncherData.js_salir)
                     );
         }
         
