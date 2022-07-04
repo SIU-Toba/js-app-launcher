@@ -11,10 +11,16 @@ var appLauncher = new function () {
         var appLauncherData = $.extend({}, appLauncherDataDefault, appLauncherDataParam);   // variable que contiene los datos del appLauncher
         var $base = $(appLauncherData.container);                                           //Cacheo el acceso de JQuery al DOM
         var scroll = false,                                                                 // Variable para activar el scroll vertical
-        cant_apps = appLauncherData.data.aplicaciones.length || 0,                          // determino la cantidad de aplicaciones     
-        cant_lineas = Math.ceil(cant_apps / 3),                                             // determino la cantidad de lineas   
         height_first_set = 0,                                                               // variable que contiene el alto del primer contenedor de aplicaciones 
         height_apps = 0;                                                                    // variable que contiene el alto total del contenedor de aplicaciones
+
+        var aplicaciones = appLauncherData.data.aplicaciones;                               // variable que contiene listado de aplicaciones
+        if (typeof aplicaciones === 'object' && aplicaciones !== null) {
+            aplicaciones = Object.values(appLauncherData.data.aplicaciones);                // Si recibe un Object lo transformo en arreglo
+        }
+
+        var cant_apps = aplicaciones.length || 0,                          // determino la cantidad de aplicaciones
+        cant_lineas = Math.ceil(cant_apps / 3);                            // determino la cantidad de lineas
         
         //////////////////////////////////////////////////////////////////////////////////////////////////////
         // Armo el HTML del perfil de usuario
@@ -190,7 +196,7 @@ var appLauncher = new function () {
                     .css('height', height_first_set);
                 
             // Recorro las aplicaciones y generon los links
-            $(appLauncherData.data.aplicaciones)
+            $(aplicaciones)
                 .each(function( index, element ) {
                     if (element.url != undefined && element.icono_url != undefined && element.etiqueta != undefined) {
                         var set_contenedor,
