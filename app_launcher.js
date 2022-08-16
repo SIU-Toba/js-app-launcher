@@ -11,11 +11,23 @@ var appLauncher = new function () {
         var appLauncherData = $.extend({}, appLauncherDataDefault, appLauncherDataParam);   // variable que contiene los datos del appLauncher
         var $base = $(appLauncherData.container);                                           //Cacheo el acceso de JQuery al DOM
         var scroll = false,                                                                 // Variable para activar el scroll vertical
-        cant_apps = appLauncherData.data.aplicaciones.length || 0,                          // determino la cantidad de aplicaciones     
-        cant_lineas = Math.ceil(cant_apps / 3),                                             // determino la cantidad de lineas   
         height_first_set = 0,                                                               // variable que contiene el alto del primer contenedor de aplicaciones 
         height_apps = 0;                                                                    // variable que contiene el alto total del contenedor de aplicaciones
-        
+
+        var aplicaciones = appLauncherData.data.aplicaciones;                               // variable que contiene listado de aplicaciones
+        if (typeof aplicaciones === 'object' && aplicaciones !== null) {
+            aplicaciones = Object.values(appLauncherData.data.aplicaciones);                // Si recibe un Object lo transformo en arreglo
+        }
+
+        var cant_apps = aplicaciones.length || 0,                          // determino la cantidad de aplicaciones
+        cant_lineas = Math.ceil(cant_apps / 3),                            // determino la cantidad de lineas
+        cuentas = appLauncherData.data.cuentas;                            // variable que contiene listado de cuentas
+
+        if (typeof cuentas === 'object' && cuentas !== null) {
+            cuentas = Object.values(appLauncherData.data.cuentas);         // Si recibe un Object lo transformo en arreglo
+        }
+
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////
         // Armo el HTML del perfil de usuario
         //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -90,23 +102,23 @@ var appLauncher = new function () {
                         }));
         }
 
-        if (appLauncherData.data.cuentas != undefined && appLauncherData.data.cuentas.length > 0) {     //Agrego el combo con cuentas validas
+        if (cuentas != undefined && cuentas.length > 0) {     //Agrego el combo con cuentas validas
             var index, 
                 opcion,
                 combo = $("<select/>", {"id": "combo_usuario_cuentas", "name": "combo_usuario_cuentas"})
-                                .appendTo($base.find("#usuario_cuenta_id"))
-                                .on('change', function() {
-                                    var nexo = (appLauncherData.urlAppUsrChg.indexOf('?') == -1) ? '?' :  '&';
-                                    window.location.href = appLauncherData.urlAppUsrChg + nexo + appLauncherData.usrChangeParam + '=' + $(this).val();
-                                });
+                        .appendTo($base.find("#usuario_cuenta_id"))
+                        .on('change', function() {
+                            var nexo = (appLauncherData.urlAppUsrChg.indexOf('?') == -1) ? '?' :  '&';
+                            window.location.href = appLauncherData.urlAppUsrChg + nexo + appLauncherData.usrChangeParam + '=' + $(this).val();
+                        });
             //Agrego las distintas cuentas al combo
-            for (index in appLauncherData.data.cuentas) {
+            for (index in cuentas) {
         		opcion = $("<option/>", {
-                                value : appLauncherData.data.cuentas[index].id_base,
-                                text : appLauncherData.data.cuentas[index].descripcion
-                            });
+                            value : cuentas[index].id_base,
+                            text : cuentas[index].descripcion
+                        });
 
-        		if (appLauncherData.data.cuenta_actual == appLauncherData.data.cuentas[index].id_base) {
+                if (appLauncherData.data.cuenta_actual == cuentas[index].id_base) {
         			opcion.attr('selected', '1');
         		}
                 combo.append(opcion);
@@ -135,10 +147,10 @@ var appLauncher = new function () {
             $base
                 .find("#usuario_cuenta_salir")
                     .append($("<a/>", { 
-                                    id: 'boton_salir',
-                                    href: '#',
-                                    text: leyenda
-                                }).on('click', appLauncherData.js_salir)
+                                id: 'boton_salir',
+                                href: '#',
+                                text: leyenda
+                            }).on('click', appLauncherData.js_salir)
                     );
         }
         
@@ -190,7 +202,7 @@ var appLauncher = new function () {
                     .css('height', height_first_set);
                 
             // Recorro las aplicaciones y generon los links
-            $(appLauncherData.data.aplicaciones)
+            $(aplicaciones)
                 .each(function( index, element ) {
                     if (element.url != undefined && element.icono_url != undefined && element.etiqueta != undefined) {
                         var set_contenedor,
